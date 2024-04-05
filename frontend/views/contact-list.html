@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="table-data">
+        <div class="order">
+            <div class="head">
+                <h3>Contact List</h3>
+                <button ng-click="decrement()">-</button>
+                {{currentPage + 1}}
+                <button ng-click="increment()">+</button>
+            </div>
+
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <!-- <th>Action</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop through contacts and display them -->
+                    <tr ng-repeat="contact in tcontacts">
+                        <td>{{ contact.name }}</td>
+                        <td>{{ contact.email }}</td>
+                        <td>{{ contact.phone }}</td>
+                        <!-- <td>
+                            <form ng-submit="deleteContact()">
+                                    <input type="text" id="deleteInput" ng-model="newContact.name" hidden/>
+                                    
+                                  </div>
+                                  <button id="deleteContactModalBtn" class="btn red">Delete</button>
+                                </div>
+                              </form>
+                        </td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
